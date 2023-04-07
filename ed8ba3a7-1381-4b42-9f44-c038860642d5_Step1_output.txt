@@ -1,10 +1,11 @@
 {
-    "UserId": "AROAQ52MI263C2MPMOCQN:jingda.xu@dish.com",
-    "Account": "064047601590",
-    "Arn": "arn:aws:sts::064047601590:assumed-role/AWSReservedSSO_DISHDataScientistDevPowerUser_882ffcdec56534fa/jingda.xu@dish.com"
+    "UserId": "******",
+    "Account": "********",
+    "Arn": "arn:aws:sts::*******************"
 }
-Added new context arn:aws:eks:us-east-1:064047601590:cluster/dp-es to /root/.kube/config
-Completed 859 Bytes/859 Bytes (2.3 KiB/s) with 1 file(s) remainingdownload: s3://cnf-scripts-deployment/cnf_testsuite.sh to ./cnf_testsuite.sh
+Added new context arn:aws:eks:us-east-1:********:cluster/dp-es to /root/.kube/config
+Completed 859 Bytes/859 Bytes (2.3 KiB/s) with 1 file(s) remaining
+download: s3://cnf-scripts-deployment/cnf_testsuite.sh to ./cnf_testsuite.sh
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
 Package docker-20.10.22-1.amzn2.0.1.x86_64 already installed and latest version
 Nothing to do
