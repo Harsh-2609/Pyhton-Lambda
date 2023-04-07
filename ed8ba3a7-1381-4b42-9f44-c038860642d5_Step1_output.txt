@@ -1,0 +1,233 @@
+{
+    "UserId": "AROAQ52MI263C2MPMOCQN:jingda.xu@dish.com",
+    "Account": "064047601590",
+    "Arn": "arn:aws:sts::064047601590:assumed-role/AWSReservedSSO_DISHDataScientistDevPowerUser_882ffcdec56534fa/jingda.xu@dish.com"
+}
+Added new context arn:aws:eks:us-east-1:064047601590:cluster/dp-es to /root/.kube/config
+Completed 859 Bytes/859 Bytes (2.3 KiB/s) with 1 file(s) remainingdownload: s3://cnf-scripts-deployment/cnf_testsuite.sh to ./cnf_testsuite.sh
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+Package docker-20.10.22-1.amzn2.0.1.x86_64 already installed and latest version
+Nothing to do
+total 100888
+dr-xr-x---  9 root root      291 Apr  6 20:54 .
+dr-xr-xr-x 18 root root      257 Mar 30 15:28 ..
+drwxr-xr-x  2 root root       39 Apr  6 20:36 .aws
+-rw-------  1 root root      155 Apr  6 20:52 .bash_history
+-rw-r--r--  1 root root       18 Oct 18  2017 .bash_logout
+-rw-r--r--  1 root root      176 Oct 18  2017 .bash_profile
+-rw-r--r--  1 root root      176 Oct 18  2017 .bashrc
+drwxr-xr-x  4 root root       29 Apr  6 20:53 .cache
+-rw-r--r--  1 root root      100 Oct 18  2017 .cshrc
+drwxr-xr-x  2 root root       20 Apr  6 20:54 .kube
+drwxr-xr-x  3 root root       19 Apr  6 20:53 .local
+drwx------  2 root root       29 Mar 30 15:29 .ssh
+-rw-r--r--  1 root root      129 Oct 18  2017 .tcshrc
+drwxr-xr-x  3 root root       78 Apr  5 23:20 aws
+-rw-r--r--  1 root root 57538982 Apr  6 20:52 awscliv2.zip
+drwxr-xr-x  3 root root       71 Apr  6 20:54 cnf-testsuite
+-rwxr-xr-x  1 root root      859 Apr  5 20:43 cnf_testsuite.sh
+-rw-r--r--  1 root root     2221 Apr  6 20:54 curl_install.sh
+-rwxr-xr-x  1 root root 45735936 Apr  6 20:52 kubectl
+cnf-testsuite has been successfully installed to: ~/.cnf-testsuite
+To use the cnf-testsuite please restart you terminal session to load the new PATH
+Or you can manually run 'export PATH=$HOME/.cnf-testsuite:$PATH' in your current session
+/root
+[32mCNF TestSuite version: v0.41.3[0m
+[32mSuccessfully created directories for cnf-testsuite[0m
+[32mGlobal helm found. Version: v3.11.2[0m
+[33mNo Local helm version found[0m
+[32mGlobal kubectl found. Version: 1.24+[0m
+[33mNo Local kubectl version found[0m
+[32mGlobal git found. Version: 2.39.2[0m
+[33mNo Local git version found[0m
+[32mAll prerequisites found.[0m
+[32mCreated cnf-testsuite namespace on the Kubernetes cluster[0m
+[32mSetup complete[0m
+[32mSuccessfully created directories for cnf-testsuite[0m
+[32mcnf-testsuite namespace already exists on the Kubernetes cluster[0m
+[32mcnf setup online mode[0m
+[32mSuccessfully setup coredns[0m
+[32mcnf setup online mode complete[0m
+[32mSuccessfully created directories for cnf-testsuite[0m
+[32m✔️  PASSED: Helm Chart exported_chart Lint Passed ⎈📝☑️[0m
+[32m✔️  PASSED: Published Helm Chart Found ⎈📦🌐[0m
+[32m✔️  PASSED: Helm deploy successful ⎈🚀[0m
+[31mKUBECONFIG is not set. Please set a KUBECONFIG, i.p 'export KUBECONFIG=path-to-your-kubeconfig'[0m
+E, [2023-04-06 20:55:14 +00:00 #17203] ERROR -- cnf-testsuite: KUBECONFIG is not set. Please set a KUBECONFIG, i.p 'export KUBECONFIG=path-to-your-kubeconfig'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/workload/compatibility.cr:568:12 in '->'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:65:11 in 'all_cnfs_task_runner'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:36:9 in 'task_runner'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in '__crystal_main'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/crystal/main.cr:115:5 in 'main'
+E, [2023-04-06 20:55:15 +00:00 #17203] ERROR -- cnf-testsuite: src/env/__libc_start_main.c:95:2 in 'libc_start_main_stage2'
+[32m✔️  🏆 PASSED: Replicas increased to 3 and decreased to 1 📦📈📉[0m
+[31mPlease add the container name coredns and a corresponding rollback_from_tag into your cnf-testsuite.yml under container names[0m
+[31m✖️  FAILED: CNF Rollback Failed[0m
+[31mPlease add the container name coredns and a corresponding rolling_update_test_tag into your cnf-testsuite.yml under container names[0m
+[31m✖️  FAILED: CNF for Rolling Update Failed[0m
+[31mPlease add the container name coredns and a corresponding rolling_downgrade_test_tag into your cnf-testsuite.yml under container names[0m
+[31m✖️  FAILED: CNF for Rolling Downgrade Failed[0m
+[31mPlease add the container name coredns and a corresponding rolling_version_change_test_tag into your cnf-testsuite.yml under container names[0m
+[31m✖️  FAILED: CNF for Rolling Version Change Failed[0m
+[32mCompatibility, installability, and upgradeability results: 4 of 9 tests passed
+[0m
+[32m✔️  PASSED: hostPath volumes not found 🖥️  💾[0m
+[33mRescued: On resource coredns-coredns of kind Service, local storage configuration volumes not found 🖥️  💾[0m
+[32m✔️  ✨PASSED: local storage configuration volumes not found 🖥️  💾[0m
+[31m✔️  ✨FAILED: Volumes used are not elastic volumes 🧫[0m
+[33m⏭️  SKIPPED: Mysql not installed 🧫[0m
+[32m✔️  🏆 PASSED: node_drain chaos test passed 🗡️💀♻️[0m
+[32mState results: 3 of 4 tests passed
+[0m
+[32m✔️  PASSED: No privileged containers 🔓🔑[0m
+[32m✔️  PASSED: Root user not found 🚫√[0m
+[32m✔️  PASSED: No containers allow a symlink attack 🔓🔑[0m
+[31m✖️  FAILED: Found containers that allow privilege escalation 🔓🔑[0m
+[31mFailed resource: Deployment coredns-coredns in default namespace[0m
+[31mRemediation: If your application does not need it, make sure the allowPrivilegeEscalation field of the securityContext is set to false.[0m
+[32m✔️  PASSED: Containers with insecure capabilities were not found 🔓🔑[0m
+[32m✔️  🏆 PASSED: Containers have resource limits defined 🔓🔑[0m
+[31m✖️  ✨FAILED: Found resources that do not use security services 🔓🔑[0m
+[31mFailed resource: Deployment coredns-coredns in default namespace[0m
+[31mRemediation: You can use AppArmor, Seccomp, SELinux and Linux Capabilities mechanisms to restrict containers abilities to utilize unwanted privileges.[0m
+[31m✖️  ✨FAILED: Ingress and Egress traffic not blocked on pods 🔓🔑[0m
+[31mFailed resource: Deployment coredns-coredns in default namespace[0m
+[31mRemediation: Define a network policy that restricts ingress and egress connections.[0m
+[32m✔️  PASSED: No containers with hostPID and hostIPC privileges 🔓🔑[0m
+[31m✖️  🏆 FAILED: Found containers running with root user or user with root group membership 🔓🔑[0m
+[31mFailed resource: Deployment coredns-coredns in default namespace[0m
+[31mRemediation: If your application does not need root privileges, make sure to define the runAsUser or runAsGroup under the PodSecurityContext and use user ID 1000 or higher. Do not turn on allowPrivlegeEscalation bit and make sure runAsNonRoot is true.[0m
+[32m✔️  🏆 PASSED: No privileged containers were found 🔓🔑[0m
+[31m✖️  ✨FAILED: Found containers with mutable file systems 🔓🔑[0m
+[31mFailed resource: Deployment coredns-coredns in default namespace[0m
+[31mRemediation: Set the filesystem of the container to read-only when possible (POD securityContext, readOnlyRootFilesystem: true). If containers application needs to write into the filesystem, it is recommended to mount secondary filesystems for specific directories where application require write access.[0m
+[32m✔️  PASSED: Containers do not have hostPath mounts 🔓🔑[0m
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: Index out of bounds
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:936:29 in '[]'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:697:3 in 'run'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/workload/security.cr:139:5 in '->'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:65:11 in 'all_cnfs_task_runner'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:36:9 in 'task_runner'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in '__crystal_main'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/crystal/main.cr:115:5 in 'main'
+E, [2023-04-06 21:12:03 +00:00 #17203] ERROR -- cnf-testsuite: src/env/__libc_start_main.c:95:2 in 'libc_start_main_stage2'
+[32m✔️  PASSED: Services are not using external IPs 🔓🔑[0m
+[33m⏭️  🏆 N/A: Pods are not using SELinux 🔓🔑[0m
+[32m✔️  PASSED: No restricted values found for sysctls 🔓🔑[0m
+[32m✔️  PASSED: No host network attached to pod 🔓🔑[0m
+[31m✖️  FAILED: Service accounts automatically mapped 🔓🔑[0m
+[31mFailed resource: Deployment coredns-coredns in default namespace[0m
+[31mRemediation: Disable automatic mounting of service account tokens to PODs either at the service account level or at the individual POD level, by specifying the automountServiceAccountToken: false. Note that POD level takes precedence.[0m
+[32m✔️  PASSED: No applications credentials in configuration files 🔓🔑[0m
+[32mSecurity results: 12 of 16 tests passed
+[0m
+[32m✔️  PASSED: No IP addresses found[0m
+[32m✔️  PASSED: NodePort is not used[0m
+[32m✔️  🏆 PASSED: HostPort is not used[0m
+[32m✔️  🏆 PASSED: No hard-coded IP addresses found in the runtime K8s configuration[0m
+[33mNo Secret Volumes or Container secretKeyRefs found for resource: {kind: "Deployment", name: "coredns-coredns", namespace: "default"}[0m
+[33m⏭  ✨SKIPPED: Secrets not used 🧫
+
+To address this issue please see the USAGE.md documentation
+[0m
+[31m✖️  ✨FAILED: Found mutable configmap(s) ⚖️[0m
+[33m⏭️  SKIPPED: alpha_k8s_apis[0m
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: Index out of bounds
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:936:29 in '[]'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:697:3 in 'run'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/workload/configuration.cr:42:16 in '->'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:65:11 in 'all_cnfs_task_runner'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:36:9 in 'task_runner'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in '__crystal_main'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/crystal/main.cr:115:5 in 'main'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: src/env/__libc_start_main.c:95:2 in 'libc_start_main_stage2'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: Index out of bounds
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:936:29 in '[]'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:697:3 in 'run'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/workload/configuration.cr:95:16 in '->'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:65:11 in 'all_cnfs_task_runner'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:36:9 in 'task_runner'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in '__crystal_main'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/crystal/main.cr:115:5 in 'main'
+E, [2023-04-06 21:12:39 +00:00 #17203] ERROR -- cnf-testsuite: src/env/__libc_start_main.c:95:2 in 'libc_start_main_stage2'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: Index out of bounds
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:936:29 in '[]'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/indexable.cr:697:3 in 'run'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/workload/configuration.cr:68:16 in '->'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:65:11 in 'all_cnfs_task_runner'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/src/tasks/utils/task.cr:36:9 in 'task_runner'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in 'call'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /workspace/lib/sam/src/sam/execution.cr:20:7 in '__crystal_main'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: /usr/share/crystal/src/crystal/main.cr:115:5 in 'main'
+E, [2023-04-06 21:12:40 +00:00 #17203] ERROR -- cnf-testsuite: src/env/__libc_start_main.c:95:2 in 'libc_start_main_stage2'
+[33m✖️  NA: No Operators Found 🦖 ⚖️👀[0m
+[32mcnf-testsuite namespace already exists on the Kubernetes cluster[0m
+[32m✔️  PASSED: Container images use versioned tags 🏷️✔️[0m
+[32mConfiguration results: 4 of 9 tests passed
+[0m
+[32m✔️  🏆 PASSED: Resources output logs to stdout and stderr 📶☠️[0m
+E, [2023-04-06 21:13:45 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://5e5d43da5faf76fb3d00421c67545ed728933425ddcc779d8b78c4feb9a37e61
+E, [2023-04-06 21:13:50 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://1e6746d5b2c7b212c6478f25c5add70b4d3844b48f847eba114d74443cfbaadd
+E, [2023-04-06 21:13:56 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://b15dfa7d09e462147112179f2613096e005cb939eda3237fbec0457b2928b406
+E, [2023-04-06 21:14:01 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://5bc81e82fe8fd229a98b1fb810397f64f90fa865b9562c85a10e3b7e86d402cf
+E, [2023-04-06 21:14:07 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://bd70996d81fece2cb27aa5d043da3fc0e32cb8ede772ab6b13bc18f7eb026600
+E, [2023-04-06 21:14:13 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://99256a8380b10ddf574894a3c63abe7e77d72cff60323ef9f2e1a4a9084a6992
+E, [2023-04-06 21:14:18 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://9a0fe362441ece986aed9ba37847ff04eb5464b8d057655a09abc7bb523488b6
+E, [2023-04-06 21:14:23 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://cc9df29aa457b1254df0fe4f10a1ecdabd8c8cf8248a457c0f2bd5ca3d1778c9
+E, [2023-04-06 21:14:29 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://2cfb95c7e6c03e59eedd6a6cb2ded1c62602cf88b1f2aab7866917f65a5f9f42
+E, [2023-04-06 21:14:34 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://31f8b7602848c6127d3cc666072f17d34712147f2d227df072c2cece2e511a18
+E, [2023-04-06 21:14:40 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://120d09175493ade225e9fa3fdffe5cfbba9c89e228d637d4d223157192ce048e
+E, [2023-04-06 21:14:45 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://53fcfe7e1e6ade52c121b3e2c8af1d8059ad2ee7deb8f367ec3c699a9ba4b6b3
+E, [2023-04-06 21:14:51 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://73e34f048731f0c53ae1c9f993b6395970740213ea704e0fd9ace2f1c797db2f
+E, [2023-04-06 21:14:56 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://3496aa639f1e31cded2646280de7cdfae1457b223445845d258460189e9cc149
+E, [2023-04-06 21:15:01 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://d40681cf2158efbf7ce16c38081d3940d77a94e0a3ad8d1f6bc954449cd2f020
+E, [2023-04-06 21:15:07 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://19e1c38e0a7a50d0c045c7a5c9b731b40e31509ca40061e76bcdd1d8f030e24a
+E, [2023-04-06 21:15:13 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://4ad31b704433f23fc344b09960f2ae1256baa6286ab13e9701aa63824e28db42
+E, [2023-04-06 21:15:19 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://5f548b7677977a9267df35d1cad50b0fb6264bca409766033b8d8de123a9a2aa
+E, [2023-04-06 21:15:25 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://ea1ffb90dcbfed0783319dc2b7b3095bc5687a48458f47f2cdcb7860bcb3cd3b
+E, [2023-04-06 21:15:30 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://3f0c1b3115cbdc917cd3613265e44cb4ad8da473a9454b2ffa2707106308ee41
+E, [2023-04-06 21:15:36 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://6556ba65d05123d524db4184f03ddcccfb0b90036df37854d6e33c606aa0c217
+E, [2023-04-06 21:15:41 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://97e2c87e03fe2b349c5248106bfcf843e6cdcae3b5f075f75674c08ce0313a47
+E, [2023-04-06 21:15:47 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://ce551f2eaae436ce353e30a47f1bddfdd3356abf21f22b0d252b336ac3830f70
+E, [2023-04-06 21:15:52 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://6e96e17eddee8909bbb45cd9eb65178f13fb3c8f4642fc6791f3da14f4bd881a
+E, [2023-04-06 21:15:58 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://aa21ad3e93f04cc0eebdf915a391dd2be4a535b03b3dedb15ad3034f59acadaa
+E, [2023-04-06 21:16:03 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://083cb7bbb3ae703ea783a2a1383fafe52a97605baf550bc23518cfc1f5a23c12
+E, [2023-04-06 21:16:10 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://6d5eac94623a34010c2d6a0f657491cf276eac1b4a23bc7318504922792a02f2
+E, [2023-04-06 21:16:15 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://be0853c25d90ecca18abdc21a07668c44e65153d87acaa6ee5c496e7ca9b0de0
+E, [2023-04-06 21:16:21 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://55f3e422a1441094bb6cf6672827c4ca1aabe2ee93745c4afc3a3e253ada8f0b
+E, [2023-04-06 21:16:26 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://a269420e92d8f4db02005b2a42a958e2dd7d00b51b1f154d192c03478c90b4c8
+E, [2023-04-06 21:16:32 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://c317557fe1ebb38132b6b6959d280899e3c69801e6dff365e0de6f8880611c18
+E, [2023-04-06 21:16:37 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://27e0a9bc2986e22ba587afceb3090bb1319b0ddd255b3d50d0b3d176805659ce
+E, [2023-04-06 21:16:43 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://308983115d1010d67e7a95ba9ce8cf9544920cca90950c92d1fb77267b83b493
+E, [2023-04-06 21:16:48 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://a675cb25a12dd8e0b207e69d90f80d379e64c0ef9db2fccedf7b46a6f3caf6c6
+E, [2023-04-06 21:16:54 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://01b62094f72bf45032dccbedfa954d0d8786fbd6c116b856857732cb19923d5b
+E, [2023-04-06 21:16:59 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://cbdfb53fa9abc29c86364d262087d6f52d3b9d3bca47a9ab89c525a290b58019
+E, [2023-04-06 21:17:05 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://ce04e773d4b0e799f79db29c8b81fa565d0ec925ba5c66aed72520836f3d8222
+E, [2023-04-06 21:17:11 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://3e354ec1b8de95fb69f95799e752be59c067b862779094e59eb7a952d0a3341b
+E, [2023-04-06 21:17:16 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://bc1680a099247786d483dc4525ef652e4f6390bdc4e490c4fd402eb44648d638
+E, [2023-04-06 21:17:22 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://0894ff1bd26578bff89bf1478ce8282ea398ed43c593de16d847d3a274dec127
+E, [2023-04-06 21:17:27 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://3678fef9212db1c8dabacd6802a10c801cfedbd7b967698961abbfb896f7ba6c
+E, [2023-04-06 21:17:33 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://2bb7ec3333bdb7f85679f19cbc5afbdf98d02009735fbeeb166f1b039c57363a
+E, [2023-04-06 21:17:38 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://c11d4b4a6b0b816ec0ba79521393b4ba65d20860ec9c621fb3d15c52569fad09
+E, [2023-04-06 21:17:44 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://bcaa0e0d6bcffbbfb58f8d3065d0b737c09ff7db4008a48eb187fb12718f009a
+E, [2023-04-06 21:17:49 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://c9e429feddb7b8ff8346d29850a4582449b3aa0f77c1a7bd5e0630074dd196d7
+E, [2023-04-06 21:17:55 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://60920d4f40aa53b14d94cc28a59809962d605226781906ca3c5de3d9bb71626d
+E, [2023-04-06 21:18:00 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://2c704a393fa5509d31617029fe9558a4b5216279c6ea6fa0e212380de8f6fe22
+E, [2023-04-06 21:18:06 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://8d6d62c8ea5e5085139b66d457302bf84a0e7b1a96937c34c0cfc723003138e6
+E, [2023-04-06 21:18:11 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://ad357348bc8a63f3b73e0a1ce3a16dcaa433bd7c69fb2186ca81a750c6c4a216
+E, [2023-04-06 21:18:17 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://a5260cadfa09df9ae9e4c32d279b5bd4c34e60e34e0593d86aac19e4effecd8e
+E, [2023-04-06 21:18:23 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://4b203ee6c6e2ef6fbed7b4385e170324871896ed7e11be48007397560950e964
+E, [2023-04-06 21:18:29 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://ba060303b73e349ec1726f8036a650f166ba88cfe1aa1941832295e41af71ce3
+E, [2023-04-06 21:18:34 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://fccb3165047034fdd3229bc023254bf46db2d55e47048e7d8c05061ba1e2b6aa
+E, [2023-04-06 21:18:40 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://a5e424164db1850709ab35cfbed7a35587fc2895e10a8dfc7ca4afc0a00b81f6
+E, [2023-04-06 21:18:46 +00:00 #17203] ERROR -- cnf-testsuite: container_id not found for: docker://a70f136048280f20e6f8c4f1b9d10917c01b5defbbe21f651dea46f96883bcfc
+E, [2023-04-06--output truncated--
